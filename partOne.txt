@@ -1,0 +1,88 @@
+Contents:
+
+1. Why Java 8
+2. Imperative vs Declarative
+3. What is Lambda?
+4. Usages of Lambda.
+5. Implementation of Runnable and Comparator.
+_______________________________________________________
+
+Why Java 8:
+
+    1. Introduced functional features like Lambda, Streams, Optional etc.
+    2. Simplify concurrency operations like handling multiple processing.
+    3. Code using Declarative way.
+
+    Functional Programming:
+        a. Creates Immutable Objects.
+        b. Readable code.
+        c. Using functions / methods as variables and pass around.
+
+_______________________________________________________
+
+Imperative vs Declarative
+
+Example 1: Sum of 100 numbers from 0 to 100
+
+    sum = IntStream.rangeClosed(0,100).sum();
+
+                    ******
+
+Example 2: Removing Duplicates from list of integers
+
+    uniqueList = IntegerList
+    .stream()
+    .distinct()
+    .collect(Collectors.toList());
+
+_______________________________________________________
+
+What is Lambda?
+
+    a. A function without a name. (aka Anonymous functions)
+    b. It has regular method parts like: method parameters, method body, return type, but they are not tied to any class like regular methods.
+    c. They can be assigned to a variable and passed around.
+
+
+    Syntax:
+
+    ( ) -> { }
+
+    () : Lambda input parameters
+    -> : arrow
+    {} : Lambda body
+
+_______________________________________________________
+
+Usages of Lambda:
+
+    1. Implement Functional Interfaces(SAM : single abstract method)
+        if an interface has only one abstract method, then they are known as Functional Interfaces. They are annotated with "@FunctionalInterface".
+
+        Abstract interfaces before Java 8 were "Runnable and Comparator"
+
+_______________________________________________________
+
+Implementation of Runnable and Comparator.
+
+    Runnable:
+
+        a. Had one method: run()
+        b. Does not take any input / output.
+        c. Used to work with thread class.
+        d. Has "@FunctionalInterface" annotation.
+
+
+    Uses of RunnableLambda:
+        1. avoids boilerPlate code.
+        2. Easy to read.
+
+                        ******
+
+    Comparator:
+
+        a. It is a functional interface.
+        b. It had one abstract method :
+            int compare(T o1, T o2);
+        c. It has Default method.
+_______________________________________________________
