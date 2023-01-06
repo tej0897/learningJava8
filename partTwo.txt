@@ -26,6 +26,9 @@ Consumer Interface:
 
     Example: Accepts an input, performs uppercase operation on it and displays the result.
 
+    IRL Use-case: From List of Students, filter students based on their grade and display them.
+    (conditional filtering and displaying them)
+
     1. Has @FunctionalInterface annotation.
     2. It has one method: accept(T t);
     3. It just accepts an input. Does not provide any output.
@@ -33,3 +36,12 @@ Consumer Interface:
     5. Use "accept()" to pass in the input.
 
 _______________________________________________________
+
+BiConsumer Interface:
+
+    It accepts two inputs, performs some operation on them.
+
+    1. There are two methods in BiConsumer Interface: Accept() and default()
+
+
+
