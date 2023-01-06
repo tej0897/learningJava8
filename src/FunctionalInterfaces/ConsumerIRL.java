@@ -7,27 +7,47 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class ConsumerIRL {
-    public static void main(String[] args) {
-        printName();
-        printNameAndActivities();
-        printNameAndActivitiesTwo();
-    }
+
+    static Consumer<Student> consumer = (student) -> System.out.println(student.getName());
+    static Consumer<Student> consumer1 = (student) -> System.out.println(student.getActivities());
+    static Consumer consumer2 = System.out::println;
+
     public static void printName(){
-        Consumer consumer = System.out::println;
+        System.out.println("printName");
         List<Student> studentList = StudentDataBase.getAllStudents();
-        studentList.forEach(consumer);
+        studentList.forEach(consumer2);
         System.out.println("\n");
     }
     public static void printNameAndActivities(){
-        Consumer<Student> consumer = (student) -> System.out.println("Name: " +student.getName()+ " \t Activity: " + student.getActivities());
+        System.out.println("printNameAndActivities");
+        Consumer<Student> consumer = (student) ->
+                System.out.println("Name: " +student.getName()+ " \t Activity: " + student.getActivities());
         List<Student> studentList = StudentDataBase.getAllStudents();
         studentList.forEach(consumer);
     }
     public static void printNameAndActivitiesTwo(){
-        Consumer<Student> consumer = (student) -> System.out.println(student.getName());
-        Consumer<Student> consumer1 = (student) -> System.out.println(student.getActivities());
+        System.out.println("printNameAndActivitiesTwo");
         List<Student> studentList = StudentDataBase.getAllStudents();
         studentList.forEach(consumer.andThen(consumer1));
+    }
+    public static void printNameAndActivitiesWithCondition(){
+        System.out.println("printNameAndActivitiesWithCondition");
+        List<Student> studentList = StudentDataBase.getAllStudents();
+        studentList.forEach(
+                (student) -> {
+                    if (student.getGradeLevel() >= 3){
+                        consumer.andThen(consumer1).accept(student);
+                    }
+                }
+        );
+    }
+
+
+    public static void main(String[] args) {
+        printName();
+        printNameAndActivities();
+        printNameAndActivitiesTwo();
+        printNameAndActivitiesWithCondition();
     }
 
 }
