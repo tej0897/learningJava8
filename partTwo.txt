@@ -43,5 +43,10 @@ BiConsumer Interface:
 
     1. There are two methods in BiConsumer Interface: Accept() and default()
 
+    UseCase:
+        a. Takes two input, print values of these two inputs or Multiply and divide the inputs and print the values. (andThen method)
+        b. Print Name and Activities of the Student, since it takes two inputs.
 
+
+_______________________________________________________
 
