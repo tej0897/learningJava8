@@ -55,3 +55,37 @@ BiConsumer Interface:
 
 _______________________________________________________
 
+Predicate Functional Interface:
+
+    1. It has Boolean method and it accepts input.
+    2. It takes input, performs operation and returns a Boolean value.
+    3. It has other default methods like "and(), negate(), or(), isEquals()".
+    4. Benefit is Code Reuse-ability.
+    5. PREDICATE CHAINING:
+    Use PredicateAnd to check two conditions like, if the number is divisible by 2 and 5. or() to check if the condition passes any one, negate() to negate the result.
+
+    UseCases:
+        1. Check the input number is even or not.
+        2. Check if the input is divisible by 2 and 5.
+        3. Check the grade level. (greater than 3)
+        4. Multiple filtering checks like grade, GPA etc.
+
+_______________________________________________________
+
+Combining Predicate and Consumer:
+(IMPORTANT) teaches how to handle instance methods. Check Code.
+
+    UseCase: Listing the Name and Activities based on filtering conditions using Predicate and Consumer.
+
+    We are creating instance methods here instead of static methods. Why?
+        Just to show that lambdas work the same irrespective of Instance method or static method.
+
+_______________________________________________________
+
+BiPredicate Functional Interface:
+
+    1. Accepts two inputs and returns boolean output.
+    2. Had default methods same as predicate. and, or, negate.
+
+_______________________________________________________
+
