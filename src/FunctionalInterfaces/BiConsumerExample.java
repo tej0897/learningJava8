@@ -16,9 +16,6 @@ public class BiConsumerExample {
         studentList.forEach(student -> biConsumer.accept(student.getName(), student.getActivities()));
     }
 
-
-
-
     public static void main(String[] args) {
         BiConsumer<String, String> biConsumer = (a,b) ->
                 System.out.println("Value of a is : " +a+ " and the value of b is : " +b);
