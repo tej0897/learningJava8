@@ -89,3 +89,71 @@ BiPredicate Functional Interface:
 
 _______________________________________________________
 
+Functional Interface:
+
+    Takes in an input and gives out an output.
+    Takes input of one type and produces output of another type. The Type should be specified while creating the Function.
+
+    1. A method in a class. Code a functionality, assign it to a variable and pass it around.
+    2. One Abstract method. apply()
+    3. 2 default methods, compose() and andThen().
+
+    UseCases:
+        1. Takes name as input and performs upperCase operation on it.
+
+        andThen: (executes functions in the order it is mentioned)
+            1. perform uppercase operation and then concatenate another string to it.
+
+        Compose: (executes first function where compose is declared and then it executes the other function)
+            UseCase: Same as above.
+
+    IRL UseCase:
+        1. Map students with their respective grades / GPA.
+        2. Filtering students based on their grade using predicate and functional interfaces.
+
+_______________________________________________________
+
+BiFunctional Interface:
+
+    1. Accepts two inputs and gives out one output.
+    2. It has only 1 method. andThen()
+
+    UseCase: Map of students and their respective GPAs.
+
+_______________________________________________________
+
+Unary and Binary Operators in Functional Interface.
+
+    Unary Operator: (I/P and O/P are of the same type)
+
+        1. It is a Functional Interface.
+        2. It extends "Function" Interface.
+
+    We can use Unary Operator when input and output are of the same type.
+
+    UseCase: Takes a String, concatenates another String.
+
+                        ******
+
+    Binary Operator: Takes two input and gives one output of the same type.
+
+        1. It extends BiFunction Interface.
+        2. It has two static methods, minBy() and maxBy().
+        3. minBy and maxBy accepts a Comparator().
+
+    UseCase: Take two numbers and perform multiplication.
+
+_______________________________________________________
+
+Supplier Interface:
+
+    Does not take any input, but gives an output.
+
+    1. It has only one method. get()
+    2. It returns something to the caller.
+    3. Opposite of Consumer Interface.
+
+    UseCase:
+        1. Return a Student / List of Students when called.
+
+_______________________________________________________
