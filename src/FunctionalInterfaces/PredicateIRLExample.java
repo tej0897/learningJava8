@@ -11,7 +11,6 @@ import java.util.function.Predicate;
 public class PredicateIRLExample {
 
     static Predicate <Student> studentPredicate = (student) -> student.getGradeLevel()>=3;
-
     static Predicate <Student> studentPredicate1 = (student) -> student.getGpa()>=3.9;
 
     public static void filterStudentsByGrade(){
