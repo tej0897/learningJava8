@@ -1,3 +1,7 @@
+Modern Java - Learn Java 8 features by coding it
+
+                    ******
+
 Contents:
 
 1. Why Java 8
