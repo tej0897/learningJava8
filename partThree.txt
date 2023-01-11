@@ -1,0 +1,54 @@
+Modern Java - Learn Java 8 features by coding it
+
+                    ******
+
+Contents:
+
+1. Method References.
+2. Function and Consumer Method References.
+3. Lambda Expression to Method Reference.
+4. Constructor Reference.
+5. Local Variables in Lambda Expression.
+6. Effectively Final Variables in Lambda and it's advantages.
+
+_______________________________________________________
+
+Method References:
+
+    1. Purpose is to simplify the implementation of Functional Interfaces.
+    2. Shortcut for Lambda expressions.
+    3. Used to refer a method in a class.
+
+    Syntax:
+            className :: instance-methodName
+            className :: static-methodName
+            Instance :: methodName
+
+using lambda:
+
+Function<String,String> example = s -> s.toUpperCase();
+
+                        ******
+
+using method reference:
+
+Function<String, String> example = String::toUpperCase;
+
+
+Where Method Reference is not applicable?
+When we write our own logic, it becomes tricky to apply method reference.
+
+Example:
+    Predicate<Student> example = s -> s.getGrade()>=3;
+
+_______________________________________________________
+
+Method Reference: Function Interface
+
+Function<String, String> example = String::toUpperCase;
+
+Use IntelliJ to convert lambdas into Method References.
+
+_______________________________________________________
+
+
