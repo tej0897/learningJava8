@@ -1,4 +1,4 @@
-package FunctionalInterfaces;
+package functionalInterfaces;
 
 public class FunctionalExample1 {
 

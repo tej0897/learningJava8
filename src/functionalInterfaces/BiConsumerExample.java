@@ -1,4 +1,4 @@
-package FunctionalInterfaces;
+package functionalInterfaces;
 
 import data.Student;
 import data.StudentDataBase;

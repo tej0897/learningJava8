@@ -1,4 +1,4 @@
-package FunctionalInterfaces;
+package functionalInterfaces;
 
 // filters using grade level
 

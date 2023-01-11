@@ -1,4 +1,4 @@
-package FunctionalInterfaces;
+package functionalInterfaces;
 
 // Listing the Name and Activities based on filtering conditions using Predicate and Consumer.
 
