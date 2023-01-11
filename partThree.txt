@@ -51,4 +51,55 @@ Use IntelliJ to convert lambdas into Method References.
 
 _______________________________________________________
 
+Refactor Lambda Expression to Method Reference
 
+To achieve this, we should create a new Method and then refer it.
+
+Example: Predicate Interface that sends boolean value when student.grade > 3, should be put in a separate method and then refer it as usual.
+
+It is not possible to write every code with respect to Method Reference. Use it wherever it is possible.
+
+_______________________________________________________
+
+Constructor Reference:
+
+    1. Constructors are invoked during creation of Object.
+
+        Syntax: ClassName :: new
+
+    Example:
+        Supplier<Student> supplier = Student::new;
+            //student class should have an empty constructor.
+
+    Invalid:
+        Student student = Student::new;
+
+            // throws compilation issue
+
+_______________________________________________________
+
+Local Variables and Lambdas:
+
+    Local Variable:
+    Any variable declared inside a method is a local variable.
+
+    Lambdas have some restrictions on using Local Variables.
+
+        1. Not allowed to use the same local variable name as lambda parameters or inside lambda body.
+
+        2. Not allowed to re-assign a value to a local variable.
+
+    There are no restrictions on Instance Variables.
+
+_______________________________________________________
+
+Effectively final:
+
+Lambdas are allowed to use local variables, but they are not allowed to modify even though they are not declared as final. This concept is called as "Effectively Final".
+
+Advantages of Effectively Final:
+
+    1. Easy to perform concurrency operations.
+    2. Promotes Functional Programming and demotes imperative style of programming.
+
+_______________________________________________________
